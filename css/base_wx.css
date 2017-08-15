@@ -1,0 +1,345 @@
+/* base set */
+html {
+    font-size: 100px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+body, input, textarea, select {
+    font-family: 'microsoft yahei', Verdana, Arial, Helvetica, sans-serif;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, pre, form, fieldset, input, textarea, blockquote, p, header, footer, nav, section, article, aside, video {
+    padding: 0px;
+    margin: 0px;
+    tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -ms-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+table, td, tr, th {
+    font-size: 12px;
+}
+
+table {
+    margin: 0px auto;
+}
+
+img {
+    vertical-align: top;
+    border: 0px;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+li {
+    list-style-type: none;
+    vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+address, caption, cite, code, dfn, em, i, b {
+    font-weight: normal;
+    font-style: normal;
+}
+
+a {
+    -webkit-appearance: none;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: none;
+    }
+
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+input, textarea, select {
+    outline: none;
+    resize: none;
+    border: 0;
+}
+
+.clearfix:after {
+    content: '';
+    clear: both;
+    display: block;
+    line-height: 0px;
+    font-size: 0px;
+    height: 0px;
+    visibility: hidden;
+}
+
+.clear {
+    clear: both;
+    display: block;
+    line-height: 0px;
+    font-size: 0px;
+    height: 0px;
+    visibility: hidden;
+}
+
+/* font size*/
+.f12 {
+    font-size: 12px;
+}
+
+.f14 {
+    font-size: 14px;
+}
+
+.f16 {
+    font-size: 16px;
+}
+
+.f18 {
+    font-size: 18px;
+}
+
+/* text align */
+.tl {
+    text-align: left;
+}
+
+.tr {
+    text-align: right;
+}
+
+.tc {
+    text-align: center;
+}
+/* float */
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+/* position */
+.pos-r {
+    position: relative;
+}
+
+.pos-f {
+    position: fixed;
+}
+
+/* padding */
+.pb-55 {
+    padding-bottom: 0.55rem;
+}
+
+/*tost效果*/
+#toastMessage {
+    top: 50%;
+    width: auto;
+    max-width: 2rem;
+    position: fixed;
+    z-index: 9999;
+}
+
+    #toastMessage span {
+        display: block;
+        overflow: hidden;
+    }
+
+    #toastMessage .sbg {
+        background: #000;
+        color: #fff;
+        opacity: .8;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+    }
+
+    #toastMessage .stxt {
+        padding: 0.08rem 0.15rem 0.11rem;
+        font-size: 0.14rem;
+        line-height: 0.16rem;
+        z-index: 2;
+        color: #fff;
+        text-align: center;
+        position: relative;
+    }
+
+/*邀请注册弹出层*/
+#mask {
+    background: #000;
+    opacity: .4;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    display: none;
+}
+
+.fbox {
+    background: #f4f4f4;
+    opacity: .97;
+    margin: 0 7%;
+    width: 86%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    z-index: 1002;
+    margin-left: -43%;
+    overflow: hidden;
+}
+
+    .fbox .sc {
+        text-align: center;
+        padding: 0.26rem 0.15rem 0.14rem;
+        font-size: 0.15rem;
+        line-height: 0.22rem;
+        min-height: 0.3rem;
+        color: #333;
+        overflow: hidden;
+    }
+
+        .fbox .sc span {
+            display: block;
+        }
+
+        .fbox .sc h2 {
+            font-size: 0.16rem;
+            font-weight: bold;
+            width: 100%;
+            padding: 0 0 0.03rem;
+        }
+
+    .fbox .btns {
+        border-top: 1px solid #aaa;
+        font-size: 0.18rem;
+        display: -webkit-box;
+    }
+
+        .fbox .btns a {
+            display: block;
+            -webkit-box-flex: 1;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            color: #157efb;
+            height: 0.46rem;
+            line-height: 0.46rem;
+            text-align: center;
+        }
+
+        .fbox .btns .ok {
+            border-left: 1px solid #aaa;
+        }
+
+        .fbox .btns .ok2 {
+            width: 100%;
+        }
+
+/* 下拉刷新 */
+.d_refresh {
+    width: 100%;
+    height: 0.5rem;
+    font-size: 0.12rem;
+    color: #666;
+    background: #fff;
+    position: relative;
+    line-height: 0.16rem;
+}
+
+.d_refresh_div {
+    margin: 0 auto;
+    width: 65%;
+    padding: 0.1rem 0;
+}
+
+.d_cfs9 {
+    color: #999 !important;
+    font-size: 0.09rem;
+}
+
+.d_refresh::before {
+    background: url(../img/dxx_img/d_shaxin.png)no-repeat;
+    background-size: 24px 26px;
+    ;
+    content: "";
+    width: 0.48rem;
+    height: 0.52rem;
+    position: absolute;
+    left: 10%;
+    top: 25%;
+}
+
+/*加载页面*/
+.wrap-wait {
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    margin-left: -50px;
+    z-index: 10;
+}
+
+    .wrap-wait .img {
+        width: 100px;
+        height: 100px;
+        margin: 32% auto 0;
+    }
+
+        .wrap-wait .img img {
+            width: 100%;
+            height: auto;
+        }
+
+    .wrap-wait p {
+        width: 100%;
+        font-size: 12px;
+        line-height: 18px;
+        text-align: center;
+        padding: 10px 0 0;
+        color: #222;
+        display: block;
+    }
+
+/*弹出层*/
+.pop_tipWrap {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 49%;
+    z-index: 999;
+    text-align: center;
+}
+
+.pop_tip {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 4px 10px;
+    border-radius: 2px;
+    background: rgba(0,0,0,0.8);
+    font-size: 14px;
+    color: #FFF;
+}
+/*end*/

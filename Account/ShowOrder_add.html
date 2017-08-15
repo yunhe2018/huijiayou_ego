@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html style="height:100%;background:#FFF;">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>惠家有一元夺宝</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+    <script src="/js/cdn.js"></script>
+    <script type="text/javascript">
+        //var staticlist = [["/css/base.css", "/css/yiyuan.css"], ["/JS/jquery-2.1.4-min.js", "/JS/g_header.js", "/JS/functions/g_Const.js", "/JS/functions/g_Const.js", "/JS/functions/g_Type.js", "/JS/jquery.mobile-1.4.5.js", "/JS/jquery.form.min.js", "/JS/pages/showorder_add.js"]];
+        var staticlist = [["/css/base.css", "/css/yiyuan.css"], ["/JS/jquery-2.1.4-min.js", "/JS/g_header.js", "/JS/functions/g_Const.js", "/JS/functions/g_Const.js", "/JS/functions/g_Type.js", "/JS/jquery.form.min.js"]];
+        WriteStatic(staticlist);
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="">
+            <input type="hidden" value="" id="hid_freeimg_id_tp" runat="server" />
+            <input id="hid_OrderID" type="hidden" value="" />
+            <div class="addrHeader">
+                <a class="back" id="goback"></a>发布晒单
+            </div>
+            <div class="fabu">
+                <p class="fabu_h clearfix">
+                    <label>标题:  </label>
+                    <textarea id="title" rows="2" cols="3" placeholder="好的标题，是成功的第一步（20字以内）" /></textarea>
+                </p>
+                <p class="fabu_main clearfix">
+                    <label>心得:  </label>
+                    <textarea id="memo" rows="6" cols="3" placeholder="快来说说心得~"></textarea>
+                </p>
+                <p class="fabu_heart"><span id="span_zinum">0</span>/500</p>
+                <!--<ul class="uploadPic clearfix">
+                    <li>
+                        <img src="img/houhou.jpg" />
+                        <b></b>
+                    </li>
+                    <li>
+                        <img src="img/houhou.jpg" />
+                        <b></b>
+                    </li>
+                    <li>
+                        <img src="img/houhou.jpg" />
+                    </li>
+                    <div class="uploadPicBtn"></div>
+                </ul>-->
+                <div id="div_uploadPic_tp" class="uploadPic_LB">
+                    <ul id="ul_tp" class="uploadPic clearfix">
+                        <!--<li>
+                            <img src="img/ccc.jpg" />
+                            <b class="deletPic"></b>
+                        </li>-->
+                        <li id="li_uploadimg_tp" class="uploadPicBtn"></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="height:500px; background:#fff"></div>
+            <div class="fabuAddBtn" id="btn_save">发布</div>
+        </div>
+        </form>
+
+    <script type="text/javascript">
+        var staticlist1 = [[], ["/JS/pages/showorder_add.js"]];
+        WriteStatic(staticlist1);
+    </script>
+
+
+</body>
+</html>

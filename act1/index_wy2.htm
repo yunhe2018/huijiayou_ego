@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <meta charset="UTF-8">
+    <title>惠家有-活动兑换</title>
+    <script src="/js/cdn.js"></script>
+    <link href="css/style_02.css" rel="stylesheet">
+    <script type="text/javascript" src="http://win.image.ichsy.com/hjyshop/js/jquery-2.1.4-min.js"></script>
+    <script type="text/javascript" src="http://win.image.ichsy.com/hjyshop/act/script/swipe.js"></script>
+    <script type="text/javascript" src="http://win.image.ichsy.com/hjyshop/js/JValidator.js"></script>
+    <script type="text/javascript" src="http://win.image.ichsy.com/hjyshop/js/g_header.js"></script>
+    <script type="text/javascript" src="http://tj.ichsy.com/UpImg/jyhshop/merchant_act.js"></script>
+</head>
+<body>
+    <input id="hidcardid" type="hidden" />
+    <input id="hidcardkey" type="hidden" />
+    <input id="hidexchangedcode" type="hidden" />
+    <input id="hidmerchant" type="hidden" />
+    <div class="wrap" id="div_init">
+        <img src="img/bg01.png" alt="">
+        <div class="banner">
+            <div id="swipe" class="hd">
+                <div class="swipe-wrap" id="div_pic_0">  
+                </div>
+            </div>
+            <!--<div id="position" class="bd">
+            </div>-->
+            <div><img src="http://win.image.ichsy.com/hjyshop/act/march/img/qunar1.jpg" alt="" style="width:50%"><img src="http://win.image.ichsy.com/hjyshop/act/march/img/qunar2.jpg" alt="" style="width:50%"></div>
+        </div>
+        <div class="from">
+            <ul class="hd hdd" id="quick">
+                <li><input id="txtNum" type="tel" value="" placeholder="请输入11位有效手机号"></li>
+                <li id="li_Verify" style="display:none"><input id="txtPicCode" type="text" value="" placeholder="请输入图片验证码" class="text"><img src="" id="Verify_codeImag" alt="点击切换验证码" title="点击切换验证码" style=" cursor: pointer;" onclick="ToggleCode(this.id, '/Ajax/LoginHandler.ashx'); return false;" /></li>
+                <li>
+                    <input id="in" type="text" value="" placeholder="请输入优惠券兑换码" class="text">
+                    <!-- <button id="btnCode">获取验证码</button> -->
+                </li>
+            </ul>
+            <a id="atOnce" style="cursor:pointer"><span>领取优惠券</span></a>
+        </div>
+    </div>
+    <div id="divAlert"></div>
+    <div class="receive" style="display:none" id="div_succ">
+        <img src="http://win.image.ichsy.com/hjyshop/act/march/img/lq_bg.jpg" alt="">
+        <p><a id="lbl_succ_3" onclick="ResultApp()" style="cursor:pointer"></a></p>
+        <div class="lq">
+            <b id="lbl_succ_1"></b>
+            <i id="lbl_succ_2"></i>
+            <a id="lbl_succ_0" onclick="CloseAct()" style="cursor:pointer"></a>
+        </div>
+        <div id="lbl_succ_4" class="tips"></div>
+        <img src="http://win.image.ichsy.com/hjyshop/act/march/img/bottom.png" class="bottom" alt="">
+    </div>
+    
+    <div class="receive" style="display:none" id="div_have">
+        <img src="http://win.image.ichsy.com/hjyshop/act/march/img/lq_bg.jpg" alt="">
+        <p><a id="lbl_have_3" onclick="ResultApp()" style="cursor:pointer"></a></p>
+        <div class="lq have">
+            <b id="lbl_have_1"></b>
+            <i id="lbl_have_2"></i>
+            <a id="lbl_have_0" onclick="CloseAct()" style="cursor:pointer"></a>
+        </div>
+        <div id="lbl_have_4" class="tips"></div>
+        <img src="http://win.image.ichsy.com/hjyshop/act/march/img/bottom.png" class="bottom" alt="">
+    </div>
+
+    <div class="receive" style="display:none" id="div_fail">
+        <img src="http://win.image.ichsy.com/hjyshop/act/march/img/lq_bg.jpg" alt="">
+        <p><a id="lbl_fail_3" onclick="ResultApp()" style="cursor:pointer"></a></p>
+        <div class="lq fail">
+            <b id="lbl_fail_1"></b>
+            <i id="lbl_fail_2"></i>
+            <a id="lbl_fail_0" onclick="CloseAct()" style="cursor:pointer"></a>
+        </div>
+        <div id="lbl_fail_4" class="tips"></div>
+        <img src="http://win.image.ichsy.com/hjyshop/act/march/img/bottom.png" class="bottom" alt="">
+    </div>
+    <script type="text/javascript" src="http://win.image.ichsy.com/hjyshop/js/functions/g_Const.js"></script>
+    <script type="text/javascript" src="http://win.image.ichsy.com/hjyshop/js/functions/g_Type.js"></script>
+    <script type="text/javascript" src="http://win.image.ichsy.com/hjyshop/js/shareGoodsDetail.js"></script>
+    
+    <script type="text/javascript" src="http://win.image.ichsy.com/hjyshop/Act/script/ValidCodeAct.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>惠家有一元夺宝</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="/JS/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/base.css", "/css/yiyuan.css"], ["/JS/jquery-2.1.4-min.js", "/JS/g_header.js", "/JS/functions/g_Const.js", "/JS/functions/g_Type.js", "/JS/tost.js", "/JS/swiper.min.js", "/JS/g_index.js", "/JS/JValidator.js"], ["/memlist.js"]];
+        WriteStatic(staticlist);
+    </script>
+</head>
+<body>
+    <div class="">
+        <div class="addrHeader">
+            <a id="btnBack" class="back"></a>订单详情
+            <b class="share" id="b_share"></b>
+        </div>
+        <ul class="header_02">
+            <li class="hList_01" id="discloseText" style="display:none;">大奖正在揭晓中 请耐心等待</li>
+            <li class="hList_02" id="selectAddress" style="display:none;">请填写收货人信息</li>
+            <li class="hList_03" id="failText" style="display:none;">很遗憾 您未能成功参与本期一元夺宝<br />继续参与 机会多多</li>
+            <li class="hList_03" id="periondEndText" style="display:none;">本期未达到所需人数，夺宝失败 <br />继续参与 机会多多</li>
+            <li class="hList_04" id="address" style="display:none;">
+                <a href="javascript:;" class="clearfix">
+                    <div class="apic"></div>
+                    <div class="atxt">
+                        <input type="hidden" id="hidRealName" />
+                        <p class="name" id="realName"><span class="tel" id="addressPhone"></span></p>
+                        <p class="ad" id="fullAddress"></p>
+                        <input type="hidden" id="areaCode" value="" />
+                    </div>
+                    <div class="apoint" id="addressPoint"></div>
+                </a>
+            </li>
+        </ul>
+        <div class="join_info" style="display:none;" id="logistic">
+            <h2>物流信息</h2>
+            <div class="wuliuInfo" id="logisticInfo">
+                <div class="wuliuInfo_pre"><span></span></div>
+                <div class="wuliuInfo_pre_b"></div>
+                <p>
+                    <!--快件已签收深刻的飞机失控了几分设计的反抗螺丝钉解放 士大夫十分分解开了解开了的肌肤乃至世界的看法
+                    <b>010-23298934</b>-->
+                </p>
+                <!--<p>2017-22-08 09:90:23</p>-->
+            </div>
+            <div class="wuliu_point"></div>
+        </div>
+        <div class="order_atate_details" id="orderInfo">
+            <div class="order_state" id="orderStatusText"><label class="lab_01">订单状态:  </label><b></b></div>
+            <div class="order_details clearfix" id="btnGoodsDetail">
+                <div class="order_img fl"><img id="goodsImg" src=""></div>
+                <div class="order_txt fl">
+                    <p class="order_txt_nm" id="goodsName"></p>
+                    <p class="qi" id="periodNum"></p>
+                </div>
+            </div>
+        </div>
+        <div class="join_info" id="involveInfo" style="display:none;">
+            <h2>参与信息</h2>
+            <p><label class="lab_01">手机号码:  </label><b id="involvePhone"></b></p>
+            <p><label class="lab_01">参与份数:  </label><b id="involveCount"></b></p>
+            <p><label class="lab_01">参与时间:  </label><b id="involveTime"></b></p>
+            <p style="display:none;" id="canyuBtn"><label class="lab_01">参与号码:</label><b onclick="window.location.reload();" style="color:blue;">&nbsp;点击查看</b></p>
+            <div class="partNums clearfix" id="involveCode">
+
+            </div>
+        </div>
+        <div class="join_info" id="winInfo" style="display:none;">
+            <h2>中奖信息</h2>
+            <p><label class="lab_01">幸运号码:  </label><b id="luckyCode"></b></p>
+            <p><label class="lab_01">幸运用户:  </label><b id="luckyUser"></b></p>
+            <p><label class="lab_01">参与份数:  </label><b id="luckyCount"></b></p>
+            <p><label class="lab_01">揭晓时间:  </label><b id="discloseTime"></b></p>
+        </div>
+        <!--<div class="list_01" id="payType">
+            <p><label class="lab_02">支付方式:  </label><b id="payTypeName"></b></p>
+        </div>-->
+        <div class="list_01">
+            <p><label class="lab_02">订单金额:</label><b id="orderPayMoney" style="float:right;margin-right:10px;"></b></p>
+            <p style="border-top:1px solid #e5e5e5;margin:10px 10px 5px 10px;padding-top:10px;font-size:12px;"><label class="lab_01">商品总金额:  </label><b id="orderTotalMoney" style="float:right;"></b></p>
+            <p style="margin:5px 10px -10px 10px;display:none;font-size:12px;"><label class="lab_01" id="couponName"></label><b id="couponMoney" style="float:right;"></b></p>
+        </div>
+        <div class="list_01 noback">
+            <p><label class="lab_02">订单编号:  </label><b id="orderNo"></b></p>
+            <p><label class="lab_02">下单时间:  </label><b id="orderTime"></b></p>
+        </div>
+    </div>
+    <div style="height:120px;"></div>
+    <div class="btn_background" id="btn_back" style="display:none;">
+        <div class="toNewBtn_03" id="btnShaiDan" style="display:none;background:#f6123d;color: #fff;">晒 单</div>
+        <div class="toNewBtn_03" id="btnConfirm" style="display:none;background:#f6123d;color: #fff;">确认领奖</div>
+        <div class="toNewBtn_03" id="btnReceive" style="display:none;background:#f6123d;color: #fff;">确认收奖</div>
+        <div class="toNewBtn_03" id="btnKeFu" style="display:none;">电话客服</div>
+    </div>
+    <!--选择的订单编号-->
+    <input type="hidden" id="sel_order_code" value="">
+    <!--点击的按钮-->
+    <input type="hidden" id="sel_btn_name" value="" />
+    <div id="fbox_ftel">
+    </div>
+    <!--y=引导弹框-->
+    <div class="yindao_dialog" style="display:none" id="wxShareGuide">
+        <span id="btnKnow"><img src="/img/know.png" /></span>
+    </div>
+    <!--end-->
+    <script type="text/javascript">
+        var staticlist = [[], ["/JS/pages/OrderDetail.js", "/JS/pages/OrderBase.js"]];
+        AppendStatic(staticlist, function () {
+            window.onload = function () {
+                orderDetail.Init();
+
+                $("#btnBack").on("click", function () {
+                    var u = GetQueryString("u")
+                    switch (u) {
+                        case "o":
+                            g_const_PageURL.GoTo(g_const_PageURL.MyOrder_List);
+                            break;
+                        case "a":
+                            g_const_PageURL.GoTo(g_const_PageURL.MyAwards);
+                            break;
+                        default:
+                            g_const_PageURL.GoTo(g_const_PageURL.MyOrder_List);
+                            break;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>惠家有一元夺宝</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <script src="/JS/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/base.css", "/css/yiyuan.css"], ["/JS/jquery-2.1.4-min.js", "/JS/g_header.js", "/JS/functions/g_Const.js", "/JS/functions/g_Type.js", "/JS/g_index.js"]];
+        WriteStatic(staticlist);
+    </script>
+</head>
+<body>
+    <div class="subSucc_box">
+        <div class="addrHeader">
+            <a class="back" id="btnBack"></a>订单支付成功
+        </div>
+        <div class="subSucc">提交订单成功</div>
+        <div class="list_01">
+            <p><label class="lab_02">订单号码:  </label><b id="orderNo"></b></p>
+            <p><label class="lab_02">支付金额:  </label><b id="payMoney"></b></p>
+        </div>
+        <div class="subSucc_btn">
+            <a class="subSucc_btn_detail" id="btnOrderDetail">订单详情</a>
+            <a class="subSucc_btn_index" onclick="g_const_PageURL.GoTo(g_const_PageURL.Index);">夺宝首页</a>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var staticlist = [[], ["/JS/pages/OrderSuccess.js", "/JS/pages/OrderBase.js"]];
+        WriteStatic(staticlist);
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>惠家有一元夺宝</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+    <script src="/JS/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/base.css", "/css/yiyuan.css"], ["/JS/jquery-2.1.4-min.js", "/JS/g_header.js", "/JS/functions/g_Const.js", "/JS/functions/g_Type.js", ]];
+        WriteStatic(staticlist);
+
+    </script>
+    <script>
+        if (IsInWeiXin.check()) {
+            $.each(g_const_OrderConfirmRefer, function (k, o) {
+                if (document.referrer.toLowerCase().indexOf(o) > -1) {
+                    localStorage["perid"] = GetQueryString("perid");
+                    localStorage["pid"] = GetQueryString("pid");
+                    localStorage["num"] = GetQueryString("num");
+                    var wxUrl = g_const_PageURL.OrderConfirm;//+ "?perid=" + GetQueryString("perid") + "&pid=" + GetQueryString("pid") + "&num=" + GetQueryString("num");
+                    WxInfo.GetPayID(wxUrl);
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="">
+        <div class="addrHeader">
+            <a class="back" id="btnBack"></a>结算
+        </div>
+        <div class="order_details clearfix">
+            <div class="order_img fl"><img id="goodsImg" src=""></div>
+            <div class="order_txt fl">
+                <p class="order_txt_nm" id="goodsName"></p>
+                <p class="qi" id="periodsNum">第期</p>
+            </div>
+        </div>
+        <!--<div class="telPhone">
+            <label>手机号码</label>
+            <input type="text" id="phone" placeholder="请输入手机号" />
+        </div>-->
+        <div class="qi_01" onclick="orderConfirm.SelectCoupon();">
+            <label class="qi_num fl">优惠券</label>
+            <span class="qi_tip fr" id="couponCount"></span>
+            <b class="qi_see"></b>
+        </div>
+        <ul class="payMode" id="balanceModel" style="margin-top:0;">
+            <li>
+                <div class="zhifubao" style="margin-left:0px;border-top:1px solid #e5e5e5">
+                    余额支付：<i id="balanceInfo"> 0夺宝币</i>
+                    <span class="qi_tip fr" id="balanceUse">0夺宝币</span>
+                </div>
+                <div class="radio" id="balanceCheck"><input type="radio" name="zhifu" value="zhifubao"></div>
+            </li>
+        </ul>
+        <ul class="payMode" id="paytype">
+            <li id="alipay" style="display:none;">
+                <div class="zhifubaoPic"></div>
+                <div class="zhifubao">
+                    支付宝
+                    <span class="qi_tip fr" name="payMoney" style="display:none;">0.00元</span>
+                </div>
+                <div class="radio"><input type="radio" name="zhifu" value="zhifubao"></div>
+            </li>
+            <li id="wxpay" style="display:none;">
+                <div class="weixinPic"></div>
+                <div class="weixin">
+                    微信支付
+                    <span class="qi_tip fr" name="payMoney" style="display:none;">0.00元</span>
+                </div>
+                <div class="radio"><input type="radio" name="zhifu" value="weixin"></div>
+            </li>
+        </ul>
+        <div class="xy clearfix" data-checkd="0">
+            <div style="font-size:12px;line-height:2rem;color:#f6123d;margin:0.5rem 1rem 0 1rem;">
+                提示：夺宝成功，七天不领我们将进行第二轮摇奖。时刻关注，才不会错过
+            </div>
+            <div style="position:fixed;bottom:70px;left: 50%;width: 320px; margin-left:-160px;">
+                <span class="xy_check fl"><i id="mark" style="background:url() no-repeat;"></i></span>
+                <span class="xy_txt fl">我已阅读并同意<i id="xieyi">《一元抢宝用户服务协议》</i></span>
+            </div>
+        </div>
+        <!--<div class="goPayWrap clearfix" style="display:none;">
+            <div class="pay fl">实付款:￥<span class="yuan" id="payMoney" data-paymoney="0">00.00</span></div>
+            <div class="pay_btn fl" id="btnSubmit" style="background:#666;">去支付</div>
+        </div>-->
+    </div>
+    <div class="toNewBtn" id="btnSubmit" style="display:block;"><span style="background:#666;">确认</span></div>
+    <div id="divAlert"></div>
+    <script>
+        var staticlist = [[], ["/JS/pages/OrderConfirm.js", "/JS/pages/weixin/paypage.js", "/JS/g_index.js", "/JS/JValidator.js"]];
+        AppendStatic(staticlist, function () {
+            window.onload = function () {
+                orderConfirm.Init();
+                $("#btnBack").on("click", function () {
+                    orderConfirm.ClearCoupon();
+                    var par = "perid=" + orderConfirm.PeriodsId + "&pid=" + orderConfirm.GoodsId;
+                    g_const_PageURL.GoTo(g_const_PageURL.GoodsDetail, par);
+                });
+            }
+        });
+    </script>
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+</body>
+</html>

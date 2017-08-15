@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>惠家有一元夺宝</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+    <script src="/JS/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/base.css", "/css/yiyuan.css"], ["/JS/jquery-2.1.4-min.js", "/JS/functions/g_Const.js", "/JS/g_header.js", "/JS/functions/g_Type.js"]];
+        WriteStatic(staticlist);
+    </script>
+</head>
+<body style="">
+    <div id="teletext">
+        <div class="addrHeader">
+            <a class="back" id="back"></a>图文详情
+        </div>
+        
+    </div>
+    <script type="text/javascript">
+        var staticlist = [[], ["/JS/g_index.js", "/JS/pages/goodsTeletext.js"]];
+        AppendStatic(staticlist, function () {
+            window.onload = function () {
+                goodsTeletext.Init();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>惠家有一元夺宝</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+    <script src="/js/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/base.css", "/css/yiyuan.css"], ["/JS/jquery-2.1.4-min.js", "/JS/g_header.js", "/JS/functions/g_Const.js"]];
+        WriteStatic(staticlist);
+    </script>
+</head>
+<body>
+    <div class="login">
+        <div class="addrHeader">
+            <a class="back"></a>快捷登录
+        </div>
+        <ul class="login_input">
+            <li class="in_01">
+                <input type="text" placeholder="请输入您的手机号" id="txtPhoneNo" name="txtPhoneNo" />
+                <b class="yz" id="btnCode">获取验证码</b>
+            </li>
+            <li class="in_01">
+                <input type="text" id="txtValidCode" name="txtValidCode" placeholder="请输入短信验证码" />
+            </li>
+            <li id="li_Verify" class="in_01" style="display:none">
+                <input id="txtPicCode" type="text" value="" placeholder="请输入图片验证码" />
+                <img src="" id="Verify_codeImag" alt="点击切换验证码" class="d_get_code"
+                     title="点击切换验证码" style="vertical-align: top; cursor: pointer;right:1rem;border: 1px solid #e5e5e5;"
+                     onclick="ToggleCode(this.id, '/Ajax/LoginHandler.ashx'); return false;" />
+            </li>
+        </ul>
+        <div class="toNewBtn_03 wei" style="bottom:0;left:8%;background:#cccccc;color: #fff;border:none;" id="btnToLogin">确定</div>
+    </div>
+    <script type="text/javascript">
+        var staticlist = [[], ["/JS/functions/g_Type.js", "/JS/pages/ValidCodeBase.js", "/JS/JValidator.js", "/JS/pages/Login_m.js"]];
+        WriteStatic(staticlist);
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>惠家有一元夺宝</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/base_wx.css">
+    <link rel="stylesheet" href="/css/index.css">
+
+    <!--<script type="text/javascript" src="/JS/jquery.w.js"></script>-->
+
+    <script src="/JS/jquery-2.1.4.js"></script>
+    <script src="/JS/jquery.mobile-1.4.5.js"></script>
+    <link href="/css/sbc.css" rel="stylesheet" />
+    <script src="/JS/g_header.js"></script>
+
+    <script src="/JS/functions/g_Const.js"></script>
+    <script src="/JS/functions/g_Type.js"></script>
+    <script src="/JS/tost.js"></script>
+    <script src="/JS/focus.js"></script>
+
+    <script src="/js/pages/weixin/paypage.js"></script>
+    <script>
+        if (IsInWeiXin.check()) {
+            $.each(g_const_OrderConfirmRefer, function (k, o) {
+                if (document.referrer.toLowerCase().indexOf(o) > -1) {
+                    var wxUrl = g_const_PageURL.MyOrder_pay + "?t=" + Math.random() + "&showwxpaytitle=1&order_code=" + GetQueryString("order_code");
+                    WxInfo.GetPayID(wxUrl);
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <!--订单编号-->
+    <input type="hidden" id="hid_order_code" value="">
+    <!--订单价格-->
+    <input type="hidden" id="hid_order_money" value="">
+    <!--订单价格-->
+    <input type="hidden" id="hid_selpaytype" value="">
+
+
+    <section class="container">
+        <h1 class="back-hd"><a class="go-back"></a>选择支付方式</h1>
+        <article class="my-order">
+            <dl class="pay-method">
+                <!--<dt>请支付：<em><i>￥</i>876.00</em></dt>
+                <dd><em class="alipay"></em>支付宝<a href="javascript:;" class="curr"></a></dd>
+                <dd><em class="weixin"></em>微信支付<a href="javascript:;"></a></dd>
+                <dd><em class="blank"></em>银联支付<a href="javascript:;"></a></dd>
+                <dd><em class="tenpay"></em>财付通<a href="javascript:;"></a></dd>-->
+            </dl>
+            <a id="btn_pay" href="javascript:;" class="btn">立即支付</a>
+        </article>
+    </section>
+    <script src="/JS/pages/MyOrder_pay.js"></script>
+    <!--底部-->
+    <script src="/JS/g_footer.js"></script>
+</body>
+</html>

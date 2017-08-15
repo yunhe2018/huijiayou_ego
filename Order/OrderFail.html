@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <meta charset="UTF-8">
+    <title>惠家有一元夺宝</title>
+    <script src="/js/cdn.js"></script>
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/d_style.css" rel="stylesheet">
+    <script src="/js/jquery-2.1.4.js"></script>
+    <script src="/js/g_header.js"></script>
+    <script src="/js/functions/g_Const.js"></script>
+    <script src="/js/tost.js"></script>
+    <script src="/JS/functions/g_Type.js"></script>
+    <style>
+        #mask {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bgcfff">
+    <header module="202065"><span class="fl jt" id="btnBack">向左</span>支付失败</header>
+    <div class="d_pay_fail" module="202065">
+
+        <div class="d_pay_fail_img">
+            <img src="http://win.image.ichsy.com/hjypin/img/bg-nodata.png" alt="" />
+        </div>
+        <p class="d_pay_fail_p"><span id="spendtime"></span>请尽快支付哦~</p>
+        <div class="d_div_pay">
+            <p>订单编号：<span id="orderNoId"></span><br>实付金额：￥<span id="actualMoneyId"></span><br>预计返利：￥<span id="toRebateMoneyId"></span><br></p>
+        </div>
+        <a id="btnOrderChange" class="d_change_pay">更改支付方式</a>
+        <div style="text-align:center;line-height:28px;">
+            <a id="lbl_succ_2" class="cf90208 fs14 lh18" href="" onclick="openApp()" style="display:none;">及时查看物流情况，请下载<i style="font-size:1.5rem;padding:0 .5rem;font-style:normal;">惠家有APP</i>哦!</a>
+        </div> <div style="text-align:center;line-height:28px;" id="divRecom"><span class="c333 fs14 lh18">填写推荐人，好友得奖励哦~</span><br><a id="btnTJR" class="cf90208 fs14 lh18">填写推荐人>></a> </div>
+
+    </div>
+    <div class="d_tac1">
+
+        <br>
+        <b style="">重要提示：</b>
+        <div>春节期间的订单，惠家有将从<span>2月15日起</span>统一为您发货，感谢您的跨年支持！新用户下载惠家有APP，可随时查看订单状态，并另送<span>880元</span>新人红包噢~</div>
+
+
+    </div>
+    <div id="divAlert"></div>
+    <script src="/js/pages/OrderBase.js"></script>
+    <script src="/js/pages/OrderFail.js"></script>
+    <script src="/js/g_footer.js"></script>
+    <script src="" id="sclkt"></script>
+</body>
+</html>
+<script type="text/javascript">
+    //测试记录用户行为
+    (function () {
+        window.page = "101090";
+        var gas = document.createElement("script");
+        gas.type = "text/javascript";
+        gas.async = true;
+        gas.src = "http://" + window.location.host + "/js/gas.js";
+
+        var l = document.getElementsByTagName("script").length;
+        var g = document.getElementsByTagName("script")[l - 1];
+        g.parentNode.insertBefore(gas, g);
+    })();
+</script>

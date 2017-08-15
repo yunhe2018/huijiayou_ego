@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <meta charset="UTF-8">
+    <title>一元夺宝活动领券</title>
+    <script src="/JS/cdn.js"></script>
+    <script type="text/javascript">
+        var from = [];
+        if (GetQueryString("from")!="") {
+            from = ["/merchant_act_" + GetQueryString("from") + ".js"];
+        }
+        var staticlist = [["/Act/css/base.css", "/Act/css/style_02.css"], ["/JS/jquery-2.1.4-min.js", "/JS/functions/g_Const.js", "/JS/g_header.js", "/JS/JValidator.js", "/Act/js/swipe.js"], from];
+        WriteStatic(staticlist);
+    </script>
+</head>
+<body>
+    <div class="wrap" id="div_init">
+        <img src="/Act/img/bg01.png" alt="">
+        <div class="banner">
+            <div id="swipe" class="hd">
+                <div class="swipe-wrap" id="div_pic_0"> 
+                    <div><img src="http://win.image.ichsy.com/hjyshop/act/march/img/qunar1.jpg" alt="" style="width:50%"><img src="http://win.image.ichsy.com/hjyshop/act/march/img/qunar2.jpg" alt="" style="width:50%"></div>
+                    <div><img src="http://win.image.ichsy.com/hjyshop/act/march/img/qunar1.jpg" alt="" style="width:50%"><img src="http://win.image.ichsy.com/hjyshop/act/march/img/qunar2.jpg" alt="" style="width:50%"></div>
+                </div>
+            </div>
+            <div id="position" class="bd"><span class="on"></span><span></span></div>
+        </div>
+        <div class="from">
+            <ul class="hd hdd" id="quick">
+                <li><input id="txt_phone_0" type="tel" value="" placeholder="请输入11位有效手机号"></li>
+                <li id="li_Verify" style="display:none"><input id="txtPicCode" type="text" value="" placeholder="请输入图片验证码" class="text"><img src="" id="Verify_codeImag" alt="点击切换验证码" title="点击切换验证码" style=" cursor: pointer;" onclick="ToggleCode(this.id, '/Ajax/LoginHandler.ashx'); return false;" /></li>
+                <li>
+                    <input id="txtexchangecode" type="text" value="" placeholder="请输入优惠券兑换码" class="text">
+                    <!-- <button id="btnCode">获取验证码</button> -->
+                </li>
+            </ul>
+            <a onclick="CouponExchange()" style="cursor:pointer"><span>领取优惠券</span></a>
+        </div>
+    </div>
+    <div id="divAlert"></div>
+    <script type="text/javascript">
+        var staticlist = [[], ["/js/functions/g_Type.js", "/js/pages/ValidCodeAct.js", "/Act/js/index2.js"]];
+        AppendStatic(staticlist, function () {
+        });
+    </script>
+</body>
+</html>

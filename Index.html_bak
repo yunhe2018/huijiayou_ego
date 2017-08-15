@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>一元夺宝</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+    <script src="/JS/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/base.css", "/css/yiyuan.css", "/css/swiper.min.css"], ["/JS/jquery-2.1.4-min.js", "/JS/g_header.js", "/JS/functions/g_Const.js", "/JS/functions/g_Const.js", "/JS/functions/g_Type.js", "/JS/tost.js", "/JS/swiper.min.js"]];
+        WriteStatic(staticlist);
+    </script>
+</head>
+<body>
+    <div>
+        <div class="yy_top">
+            <!--轮播图盒子-->
+            <div class="swiper-container">
+                <div class="swiper-wrapper" id="bannerList">
+                    <div class="swiper-slide"><a onclick="g_const_PageURL.GoTo(g_const_PageURL.CommonProblem);"><img src="/img/banner.png" /></a></div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+            <ul class="top_nav">
+                <li data-sort="0">人气</li>
+                <li data-sort="1">进度</li>
+                <li data-sort="2">最新</li>
+                <li class="pepo" data-sort="3" data-desc="1">
+                    总需人数
+                    <div class="" id="sortMark"></div>
+                </li>
+            </ul>
+        </div>
+        <ul class="yiyuan_list" id="dataList"></ul>
+        <div class="retn">
+            <a href="javascript:;" class="personal" onclick="g_const_PageURL.GoTo(g_const_PageURL.MyOrder_List);"></a>
+            <a href="javascript:;" class="to_top" style="display: none;"></a>
+        </div>
+        <div class="index_mask" style="display:none;">
+            <div class="index_dialog">
+                <img src="/img/dialog.jpg">
+                <b class="mask_close"></b>
+            </div>
+        </div>
+        <div class="yg_mask" id="guid" style="display:none;">
+            <div class="yg_dialog">
+                <img src="/img/yg_mask.jpg">
+                <span class="yg_dialog_close" id="guidClose"></span>
+                <p class="yg_dialog_tip">某商品价值20元，共20个参与好吗</p>
+                <a class="yg_dialog_go"></a>
+            </div>
+        </div>
+        <div class="yg_mask" id="awardOrder" style="display: none;">
+            <div class="yg_dialog">
+                <img src="/img/yg_mask_02.jpg">
+                <span class="yg_dialog_close" id=""></span>
+                <a class="yg_dialog_go_02" id="gotoOrderDetail"></a>
+            </div>
+        </div>
+        <div class="isBtm">
+            <span><i>已经到底了</i></span>
+        </div>
+    </div>
+
+
+    <!-- 新手引导图 -->
+        <div class="newppletgo">
+            <div class="newppletgo_01"></div>
+            <div class="newppletgo_02"></div>
+        </div>
+    <!--  -->
+    <script type="text/javascript">
+        var staticlist = [[], ["/JS/g_index.js", "/JS/pages/index.js"]];
+        WriteStatic(staticlist);
+        $(function () {
+            Page_Index.Init();
+        });
+    </script>
+</body>
+</html>

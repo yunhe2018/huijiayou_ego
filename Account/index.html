@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>惠家有一元夺宝</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name='apple-itunes-app' content='app-id=991850'>
+
+    <script src="/js/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/base_wx.css", "/css/index.css"], ["/JS/jquery-2.1.4-min.js", "/JS/g_header.js"]];
+        WriteStatic(staticlist);
+    </script>
+    <style>
+        #mask {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <section class="container" module="202036">
+        <!--点击的按钮-->
+        <input type="hidden" id="hid_selbtn" value="">
+
+        <h1 class="back-hd"><a id="btnback" class="go-back"></a>个人中心</h1>
+        <header class="user-header">
+            <article id="atcHead" class="portrait-hd user-sudcess">
+                <a>
+                    <span class="user-portrait"></span>
+                    <div id="divUser"></div>
+                </a>
+            </article>
+            <article class="user-order"><a id="MyOrder_List_All" >我的订单<span>查看全部已购商品</span></a></article>
+            <article class="user-order-number">
+                <a id="MyOrder_List_DFK" class="">待付款<span id="divDFK"></span></a>
+                <a id="MyOrder_List_DFH" class="">待发货<span id="divDFH"></span></a>
+                <a id="MyOrder_List_DSH" class="">待收货<span id="divYFH"></span></a>
+                <a id="MyOrder_List_JYCG" class="">待评价<span id="divJYCG"></span></a>
+            </article>
+        </header>
+        <div class="space"></div>
+        <ul class="user-menu">
+            <li><a id="ichsyUrl">微公社<span id="divIchsyMoney"></span></a></li>
+            <li><a id="MyCouponUrl" >我的优惠券<span id="divCouponCount"></span></a></li>
+            <li><a id="MyCollectionUrl">我的收藏</a></li>
+            <li><a id="MyViewHistoryUrl" >我的浏览历史</a></li>
+            <li class="space"></li>
+            <li><a id="Feedback_IndexUrl" >帮助与意见反馈</a></li>
+            <!--<li><a id="chongzhi">充值</a></li>
+            <li><a id="chongzhilist">充值列表</a></li>-->
+
+        </ul>
+        <a class="btn" id="btnloginout" style="display:none" >退出登录</a>
+        <div id="divAlert"></div>
+        <footer class="copyright">
+            <a title=""></a>
+        </footer>
+    </section>
+    <!--确认窗口  开始-->
+    <div id="fbox_ftel">
+    </div>
+    <!--确认窗口  结束-->
+
+    <script type="text/javascript">
+        var staticlist = [[], ["/js/functions/g_Const.js", "/js/functions/g_Type.js", "/js/tost.js", "/js/g_footer.js", "/js/pages/AccountIndex.js"]];
+        WriteStatic(staticlist);
+    </script>
+    <!--搜狐接口接获得用户端IP口-->
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+
+</body>
+</html>
+<script type="text/javascript">
+    //测试记录用户行为
+    //(function () {
+        window.page = "101014";
+        var gas = document.createElement("script");
+        gas.type = "text/javascript";
+        gas.async = true;
+        gas.src = cdn_path + "/js/gas.js";
+
+        var l = document.getElementsByTagName("script").length;
+        var g = document.getElementsByTagName("script")[l - 1];
+        g.parentNode.insertBefore(gas, g);
+  //  })();
+</script>

@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>惠家有一元夺宝</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+    <script src="/js/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/base.css", "/css/yiyuan.css"], ["/JS/jquery-2.1.4-min.js", "/JS/g_header.js", "/JS/functions/g_Const.js", "/JS/functions/g_Type.js", "/JS/tost.js", "/JS/g_index.js"]];
+        WriteStatic(staticlist);
+    </script>
+</head>
+<body>
+    <div class="">
+        <div class="addrHeader">
+            <a class="back" onclick="g_const_PageURL.GoTo(g_const_PageURL.MyAccount);"></a>我的余额
+            <b onclick="g_const_PageURL.GoTo(g_const_PageURL.Recharge);">充值</b>
+        </div>
+        <div class="recharge_hd">
+            <p class="recharge_hd_con">余额（夺金币）</p>
+            <p class="recharge_hd_num" id="balance">0</p>
+        </div>
+        <div class="rechargeRecord">
+            <!--<ul class="rechargeRecord_ch clearfix" id="nav_balance">
+                <li class="curr" data-t="use">使用记录<i>30天</i></li>
+                <li data-t="record">充值记录<i>30天</i></li>
+            </ul>-->
+            <div class="goodDelail_02" id="recordList">
+                <div class="pic_con no" id="notRecord">
+                    <span class="pic_con_lt">
+                        充值记录
+                    </span>
+                    <i>（最近30天）</i>
+                </div>
+            </div>
+            <ul class="rechargeRecord_lsit" id="resultList" style="display:none;"></ul>
+            <div class="noRecode" id="noResult" style="display:none;">
+                <img src="/img/wwwww.jpg">
+                <p id="noResultMsg"></p>
+            </div>
+        </div>
+    </div>
+    <div class="isBtm" style="display:none;" id="theLast">
+        <span><i>已经到底了</i></span>
+    </div>
+    <div id="fbox_ftel">
+    </div>
+    <script type="text/javascript">
+        var staticlist = [[], ["/JS/pages/MyBalance.js"]];
+        AppendStatic(staticlist, function () {
+            $(function () {
+                MyBalance.Init();
+            });
+        });
+    </script>
+</body>
+</html>

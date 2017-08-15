@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>hjy</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name = "format-detection" content = "telephone=no">
+<meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+<link href="css/base.css" rel="stylesheet">
+<link href="./css/yiyuan.css" rel="stylesheet" type="text/css">
+<style>
+</style>
+</head>
+<body>
+<div class="">
+    <div class="addrHeader">
+        <a href="#" class="back"></a>充值
+    </div>
+    <div class="main"  style="display:block">
+        <div class="recharge">
+            散的咖啡斯内德福克斯阿隆索的福建省了的咖啡机阿萨德了附近收代理费jdflsdf sdfsdlf asd阿三了地方收代理费宋德福
+        </div>
+        <div class="rechargeNum">
+            <h3 class="rechargeNum_h3">充值金额（元）</h3>
+            <ul class="clearfix">
+                <li class="on">
+                    <i class="num">10</i>
+                    <i class="fan">饭100%</i>
+                </li>
+                <li>
+                    10
+                </li>
+                <li>
+                    10
+                </li>
+                <li>
+                    10
+                </li>
+                <li>
+                    10
+                </li>
+                <li>
+                    <input type="text" placeholder="其它金额" />
+
+                </li>
+            </ul>
+        </div>
+        <div class="recharge_ch">
+            <h3 class="rechargeNum_h3">充值方式</h3>
+            <ul class="payMode" id="paytype">
+                <li id="alipay" style="display:block;">
+                    <div class="zhifubaoPic"></div>
+                    <div class="zhifubao">支付宝</div>
+                    <div class="radio"><input type="radio" name="zhifu" value="zhifubao"></div>
+                </li>
+                <li id="wxpay" style="display:block;" type="WxPay">
+                    <div class="weixinPic"></div>
+                    <div class="weixin">微信支付</div>
+                    <div class="radio"><input type="radio" name="zhifu" value="weixin"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="toNewBtn" id="btnOperate" style=""><span>确认充值</span></div>
+    </div>
+    <div class="recharge_succ" style="display:none">
+        <p class="recharge_succ_txt">充值成功</p>
+        <p class="recharge_succ_mn">获取9999999999999999999999个夺宝币</p>
+        <a class="recharge_succ_btn" href="javascript:;">返回首页</a>
+    </div>
+</div>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script>
+window.onload=function(){
+    //自适应rem初始化设置
+    function fontSize(){
+        if(document.documentElement.clientWidth<1280){ //initial-scale=0.5是缩小一倍后适应屏幕宽。
+            document.documentElement.style.fontSize = 10*(document.documentElement.clientWidth/320)+'px';
+        }else{ 
+            document.documentElement.style.fontSize='40px';
+        }
+    }
+    fontSize();
+    window.onresize=function(){fontSize();};    
+}
+</script>
+</body>
+</html>

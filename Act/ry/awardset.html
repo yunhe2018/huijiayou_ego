@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="/JS/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/base.css", "/css/yiyuan.css"], ["/JS/jquery-2.1.4-min.js", "/JS/g_header.js", "/JS/functions/g_Const.js", "/JS/functions/g_Type.js", "/JS/tost.js", "/JS/JValidator.js"], []];
+        WriteStatic(staticlist);
+    </script>
+
+</head>
+<body>
+    <div>开奖</div>
+    <div>
+        <table>
+            <tr>
+                <td align="center">填写期号后选择获胜队和mvp队员，点击【开奖】进行算奖</td>
+            </tr>
+        </table>
+        <table id="table_award">
+            <tr>
+                <td>开奖期号:</td>
+                <td><input type="text" id="periodnum" value="" /></td>
+                <td>获胜队:</td>
+                <td><select id="team"></select></td>
+                <td>MVP队员:</td>
+                <td><select id="user"></select></td>
+                <td><a id="btn_award">开奖</a></td>
+                <td><a id="btn_chipinaward">查询中奖信息</a></td>
+            </tr>
+        </table>
+        <table id="table_chipinaward">
+
+        </table>
+</div>
+
+    <script type="text/javascript">
+        var staticlist = [[], [ "/JS/ry/awardset.js"], []];
+        WriteStatic(staticlist);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html style="background:#f7f7f7">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>惠家有一元夺宝</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="/JS/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/base.css", "/css/yiyuan.css", "/css/swiper.min.css"], ["/JS/jquery-2.1.4-min.js", "/JS/g_header.js", "/JS/functions/g_Const.js", "/JS/functions/g_Type.js", "/JS/tost.js", "/JS/swiper.min.js", "/JS/g_index.js"], ["/memlist.js"]];
+        WriteStatic(staticlist);
+    </script>
+</head>
+<body style="height:auto;-moz-user-select:none;-webkit-user-select:none;" unselectable="on" onselectstart="return false;">
+    <div class="">
+        <div class="addrHeader">
+            <a id="btnBack" class="back"></a>商品详情
+            <b class="share" id="b_share"></b>
+        </div>
+        <div class="goodDelail_01" id="goodsInfo" style="padding-bottom: 1rem;">
+            <!--轮播图盒子-->
+            <div class="swiper-container" style="padding-bottom:0.5rem;">
+                <div class="swiper-wrapper" id="pcList">
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+            <p class="yy_goodNm" id="title"></p>
+            <p class="yy_goodCon" id="promotionTitle" style="display:none;"></p>
+            <div class="pro_box">
+                <div class="pro" id="progressBar"></div>
+            </div>
+            <div class="pp_count">
+                <span class="pp_count_01" id="totalCount">总须0份</span>
+                <span class="pp_count_02" id="leftCount">剩余0份</span>
+            </div>
+            <div class="lucky" style="display:none;" id="luckyMan">
+                <p class="luckyUser"><label>幸运用户:　</label><span id="userName"></span></p>
+                <p class="joinCount"><label>参与次数:　</label><span id="count"></span></p>
+                <p class="luckyTel clearfix"><label>幸运号码:　　</label><span id="luckyCode"></span></p>
+                <p class="seeDe clearfix"><span class="seeDe_con" onclick="g_const_PageURL.GoTo(g_const_PageURL.LuckyDetail, 'perid=' + GetQueryString('perid') + '&pid=' + GetQueryString('pid'));">查看详情</span><span class="seeDe_pic"></span></p>
+            </div>
+            <div class="lucky_02" style="display:none;" id="disclose">
+                <h3>本期参与人数已满，等待揭晓</h3>
+                <p class="luckyTel clearfix"><label id="timerTitle">揭晓倒计时:　</label><span id="timmer">00:00:00</span></p>
+            </div>
+            <div class="lucky_02" style="display:none;" id="discloseTitleBtn">
+                <h3>本期参与人数已满，等待揭晓</h3>
+                <p class="luckyTel clearfix"><label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><span onclick="window.location.reload();" id="btnChaKan">点击查看中奖信息</span></p>
+            </div>
+            <div class="qb_tip" id="tip" style="display:none;"><span class=""></span></div>
+            <div class="qb_tip" id="MyNumTip" style="display:none;"><span class=""></span></div>
+            <div class="partNums clearfix" style="display:none;" id="myCode">
+            </div>
+        </div>
+        <div class="goodDelail_02" style="display:none;" id="LoginInfo">
+            <div class="pic_con no" id="btnLogin" style="text-align:center;">
+                <span class="pic_con_lt"><span style="color:#f6123d">登录</span>以查看您的夺宝号码</span>
+            </div>
+        </div>
+        <div class="goodDelail_02">
+            <div class="pic_con" onclick="g_const_PageURL.GoTo(g_const_PageURL.GoodsDetailTeletext,'pid='+GetQueryString('pid'));">
+                <span class="pic_con_lt">图文详情</span>
+                <span class="pic_con_rt clearfix"><b>建议在wifi下查看</b><i></i></span>
+            </div>
+            <div class="pic_con no" onclick="g_const_PageURL.GoTo(g_const_PageURL.OtherPeriod, 'pid=' + GetQueryString('pid'));">
+                <span class="pic_con_lt">往期揭晓</span>
+                <span class="pic_con_rt clearfix"><i></i></span>
+            </div>
+        </div>
+        <div class="goodDelail_02" id="recordList">
+
+        </div>
+    </div>
+    <div style="height:6rem;"></div>
+    <div class="toNewBtn" id="btnOperate" style="display:none;"><span>立即参与</span></div>
+    <div class="gd_mask" id="selectPop">
+        <div class="gd_dialog">
+            <div class="gdd_partNum clearfix" style="margin-top:1rem;margin-bottom:0;">
+                <label>参与份数</label>
+                <div class="gd_num_as">
+                    <span class="gd_num_s" id="reduce">-</span>
+                    <input type="text" class="gd_count" id="selectCount" data-max="0" data-min="1" value="1" />
+                    <span class="gd_num_a" id="plus">+</span>
+                </div>
+            </div>
+            <div class="fast_selects" style="" id="fastSelects">
+                <span class="btn_01" num="5">5</span>
+                <span class="btn_02" num="10">10</span>
+                <span class="btn_03" num="15">15</span>
+                <b class="dbb" id="totalMoney">共1夺宝币</b>
+            </div>
+            <div class="gd_num_btn" id="btnConfirm">确定</div>
+        </div>
+    </div>
+    <!-- 新手引导图 -->
+    <div class="newppletgo">
+        <div class="newppletgo_01" id="guid1" style="display: none;">
+            <b onclick="$('#guid1').hide(); $('#guid2').show(); return false;"></b>
+        </div>
+        <div class="newppletgo_02" id="guid2" style="display: none">
+            <b onclick="$('#guid2').hide(); return false;"></b>
+        </div>
+    </div>
+    <!--  -->
+    <script type="text/javascript">
+        var staticlist = [[], ["/JS/JValidator.js", "/JS/pages/goods.js"]];
+        AppendStatic(staticlist, function () {
+            window.onload = function () {
+                goods.Init();
+                $("#btnBack").on("click", function () {
+                    g_const_PageURL.GoTo(g_const_PageURL.Index);
+                });
+            }
+        });
+        try {
+            var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1259634178'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "w.cnzz.com/q_stat.php%3Fid%3D1259634178' type='text/javascript'%3E%3C/script%3E"));
+        } catch (e) {
+
+        }
+    </script>
+</body>
+</html>

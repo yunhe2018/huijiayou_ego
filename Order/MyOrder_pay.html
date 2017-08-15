@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>惠家有一元夺宝</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="/JS/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/base_wx.css", "/css/index.css"], ["/JS/jquery-2.1.4-min.js", "/JS/g_header.js", "/JS/functions/g_Const.js", "/JS/functions/g_Type.js", "/JS/tost.js", "/JS/focus.js", "/JS/pages/weixin/paypage.js"]];
+        WriteStatic(staticlist);
+
+    </script>
+    <script>
+        if (IsInWeiXin.check()) {
+            $.each(g_const_OrderConfirmRefer, function (k, o) {
+                if (document.referrer.toLowerCase().indexOf(o) > -1) {
+                    var wxUrl = g_const_PageURL.MyOrder_pay + "?order_code=" + GetQueryString("order_code");
+                    WxInfo.GetPayID(wxUrl);
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <!--订单编号-->
+    <input type="hidden" id="hid_order_code" value="">
+    <!--订单价格-->
+    <input type="hidden" id="hid_order_money" value="">
+    <!--订单价格-->
+    <input type="hidden" id="hid_selpaytype" value="">
+
+
+    <section class="container">
+        <h1 class="back-hd"><a class="go-back"></a>选择支付方式</h1>
+        <article class="my-order">
+            <dl class="pay-method" id="paytype">
+                <dt>请支付：<em id="payMoney"></em></dt>
+                <dd id="wxpay" style="display:none;"><em class="weixin"></em>微信支付<a></a></dd>
+                <dd id="alipay" style="display:none;"><em class="alipay"></em>支付宝<a></a></dd>
+                <dd id="yipay" style="display:none;"><em class="yipay"></em>易付宝<a></a></dd>
+            </dl>
+            <a id="btn_pay" class="btn">立即支付</a>
+            <a id="btn_pay_wait" class="pay-btn-gray" style="display:none">正在申请支付</a>
+        </article>
+    </section>
+    <script src=""></script>
+    <!--底部-->
+    <script src=""></script>
+    <script type="text/javascript">
+        var staticlist = [[], ["/JS/pages/MyOrder_pay.js", "/JS/g_footer.js"]];
+        WriteStatic(staticlist);
+    </script>
+</body>
+</html>

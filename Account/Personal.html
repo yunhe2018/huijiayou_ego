@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>我的</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+    <script src="/js/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/base.css", "/css/yiyuan.css"], ["/JS/jquery-2.1.4-min.js", "/JS/g_header.js", "/JS/functions/g_Const.js", "/JS/functions/g_Type.js", "/JS/tost.js", "/JS/g_index.js"]];
+        WriteStatic(staticlist);
+    </script>
+</head>
+<body>
+    <div class="addrHeader">
+        <!--<a class="back" onclick="history.back();"></a>-->我的
+    </div>
+    <div class="peresonalH ">
+        <!--<div class="personHeader">
+            <div class="personPic"><img id="headPic" src=""></div>
+            <div class="persontxt" id="userName"></div>
+        </div>-->
+        <div class="personHeader">
+            <div class="personPic02"><img id="headPic"></div>
+            <div class="persontxt02">
+                <p class="name" id="userName">&nbsp;</p>
+                <p class="balance">余额：<i class="num" id="balance">0</i><i class="b_con">夺宝币</i></p>
+            </div>
+            <div class="chong" onclick="g_const_PageURL.GoTo(g_const_PageURL.Recharge);"></div>
+        </div>
+        <div class="succRecord"><span class="lt" onclick="g_const_PageURL.GoTo(g_const_PageURL.MyOrder_List);">夺宝记录</span><span onclick="g_const_PageURL.GoTo(g_const_PageURL.MyAwards);">中奖记录</span></div>
+        <ul class="my_menu">
+            <li class="my_orders clearfix" onclick="g_const_PageURL.GoTo(g_const_PageURL.MyBalance);">
+                <a href="javascript:;" class="clearfix">
+                    <span class="menu_txt ftsz16">
+                        我的余额
+                    </span>
+                    <span class="menu_point"></span>
+                </a>
+            </li>
+            <li class="my_orders clearfix" onclick="g_const_PageURL.GoTo(g_const_PageURL.CouponList);">
+                <a href="javascript:;" class="clearfix">
+                    <span class="menu_txt">
+                        夺宝优惠券
+                        <b id="newCoupon" style="display:none;"></b>
+                    </span>
+                    <span class="menu_point"></span>
+                    <i id="couponCount"></i>
+                </a>
+            </li>
+            <li class="my_tuan clearfix" id="myOrdershow">
+                <a href="javascript:;" class="clearfix">
+                    <span class="menu_txt">我的晒单</span>
+                    <span class="menu_point"></span>
+                    <i></i>
+                </a>
+            </li>
+            <li class="my_shouhou clearfix" onclick="g_const_PageURL.GoTo(g_const_PageURL.CommonProblem);">
+                <a href="javascript:;" class="clearfix">
+                    <span class="menu_txt">常见问题</span>
+                    <span class="menu_point"></span>
+                </a>
+            </li>
+            <li class="my_addr clearfix" onclick="Account.ContactKeFu(this); return false;">
+                <a href="javascript:;" class="clearfix">
+                    <span class="menu_txt">联系客服</span>
+                    <span class="menu_point"></span>
+                </a>
+                <a href="" style="display:none;" id="phoneNo"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="cancelLogin" id="loginOut" style="display:none;">退出登录</div>
+    <div style="height:6rem;">
+    </div>
+    <ul class="b_nav clearfix">
+        <li onclick="g_const_PageURL.GoTo(g_const_PageURL.Index);">
+            <div class="b_nav_pic bpic1"></div>
+            <div class="b_nav_txt">首页</div>
+        </li>
+        <li onclick="g_const_PageURL.GoTo(g_const_PageURL.AwardList);">
+            <div class="b_nav_pic bpic22"></div>
+            <div class="b_nav_txt">最新揭晓</div>
+        </li>
+        <li onclick="g_const_PageURL.GoTo(g_const_PageURL.ShowOrder_List);">
+            <div class="b_nav_pic bpic55"></div>
+            <div class="b_nav_txt">晒单</div>
+        </li>
+        <li onclick="g_const_PageURL.GoTo(g_const_PageURL.MyAccount);">
+            <div class="b_nav_pic my_active">
+                <i class="newTip" style="display:none;" id="tipNew"></i>
+            </div>
+            <div class="b_nav_txt curr">我的</div>
+        </li>
+    </ul>
+    <div id="fbox_ftel">
+    </div>
+    <script type="text/javascript">
+        var staticlist = [[], ["/JS/pages/Person.js"]];
+        WriteStatic(staticlist);
+        function GoToMyAddress() {
+            localStorage["fromOrderConfirm"] = '0';
+            g_const_PageURL.GoTo(g_const_PageURL.AddressList);
+        }
+    </script>
+</body>
+</html>

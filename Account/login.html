@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title></title>
+    <script src="/js/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/base_wx.css", "/css/d_style.css"], ["/JS/jquery-2.1.4-min.js", "/JS/g_header.js", "/JS/functions/g_Const.js", "/JS/tost.js", "/JS/JValidator.js"]];
+        WriteStatic(staticlist);
+    </script>
+</head>
+<body class="bgceee">
+    <input type="hidden" id="gobackurl" value="" />
+    <div class="container" module="202033">
+        <h1 class="d_back_hd"><a class="d_go_back" id="btnBack"></a>登录<a id="btnReg" class="d_back_right cdc0f50">注册</a></h1>
+        <article class="d_login">
+            <ul class="d_log_in">
+                <li class="bder"><label class="tel"></label><input id="txtLogin" type="tel" name="txtLogin" value="" placeholder="请输入11位有效手机号"><a id="d_close" class="d_close" style="display:none;"></a></li>
+                <li class="yj"><label class="psw"></label><input id="txtPass" type="password" name="txtPass" value="" placeholder="请输入6~16位密码"><a id="d_close_psw" class="d_close_psw" style="display:none;"></a><em id="d_emp" class="d_emp"></em></li>
+            </ul>
+            <div class="d_login_btn">
+                <a id="btnToLogin" class="d_btn_dl">登录</a>
+                <span id="btnPhoneReg" class="fl d_mgt12">手机快捷登录</span><span id="btnForget" class="fr d_mgt12">重置密码</span>
+            </div>
+            <div class="d_other_login">
+                <div class="d_line"></div>
+                <span>其他登录方式</span>
+                <a id="weixin_login" title="微信"></a>
+            </div>
+        </article>
+    </div>
+    <script type="text/javascript">
+        var staticlist = [[], ["/js/functions/g_Type.js", "/js/pages/ValidCodeBase.js", "/js/pages/Login.js", "/js/g_footer.js","/JS/functions/g_app.js"]];
+        WriteStatic(staticlist);
+        $(function () {
+            $("#btnBack").on("click", function () {
+                var refer = document.referrer.toLowerCase();
+                if (refer.indexOf("myorders") > -1 || refer.indexOf("myawards") > -1 || refer.indexOf("couponlist") > -1 || refer.indexOf("mybalance") > -1 || refer.indexOf("showorder_list") > -1) {
+                    window.location.href = PageUrlConfig.BackTo(2);
+                }
+                else {
+                    window.location.href = PageUrlConfig.BackTo();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+<!--<script type="text/javascript">
+    //测试记录用户行为
+    (function () {
+        window.page = "101013";
+        var gas = document.createElement("script");
+        gas.type = "text/javascript";
+        gas.async = true;
+        gas.src = "http://" + window.location.host + "/js/gas.js";
+
+        var l = document.getElementsByTagName("script").length;
+        var g = document.getElementsByTagName("script")[l - 1];
+        g.parentNode.insertBefore(gas, g);
+    })();
+</script>-->

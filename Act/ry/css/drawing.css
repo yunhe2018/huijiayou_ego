@@ -1,0 +1,273 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body{ background:#c0c0c0;}
+html{ font-size:10px;}
+
+header {
+    background: #fefefe;
+    color: #333;
+    font-size: 2rem;
+    height: 4.4rem;
+    border-bottom: 1px solid #b1b1b1;
+    line-height: 4.4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+header .jt {
+    width: 4.4rem;
+    height: 4.4rem;
+    background: url(../img/ico-jt.png) no-repeat left center;
+    background-size: 50% auto;
+    line-height: 99rem;
+    position: absolute;
+    left: .5rem;
+    top: 0;
+    z-index: 9;
+    overflow: hidden;
+}
+.box-01{position:relative;}
+.count{
+	width:29%;
+	position:absolute;
+	left:2%;
+	top:0;
+	color:#FFF;
+}
+.count span{width:100%; display:block; text-align:center; font-size:12px; line-height:22px;}
+.count p{text-align:center; font-size:16px;}
+.joinPeople{
+	width:46.5%; 
+	padding:9px 0;
+	border-radius:12px;
+	position:absolute; 
+	left:28.2%; 
+	top:60%; 
+	color:#f9edad; 
+	font-size:12px; 
+	text-align:center; 
+	background:rgba(0,0,0,0.4);
+}
+.teamName{
+	overflow:hidden;
+	position:absolute;
+	width:100%;
+	bottom:15%;
+}
+.teamName span{
+	float:left;
+	width:50%;
+	color: #FFF;
+    text-align: center;
+    font-size: 16px;
+}
+.box-02{
+	background:url(../img/box-02.png) no-repeat;
+	background-size:100% 100%;
+}
+.team{ width:100%; overflow:hidden;margin-top: -1px;}
+.team>li{float:left; width:50%;}
+.team h1{ color:#FFF; text-align:center; font-size:16px;  }
+.players{padding-bottom:10px; }
+.players li{ overflow:hidden;padding-bottom:24px; }
+.players .pic{
+	width:120px;
+	height:120px;
+	margin:0 auto;
+	margin-bottom:20px;
+	border-radius:150px;
+	overflow:hidden;
+}
+.players .pic img{
+	width:100%;
+	height:100%;
+}
+.players .name{
+	text-align:center;
+	height:22px;
+	margin: 16px 0;
+}
+.players .name label{
+	display:inline-block;
+	font-size:16px;
+	height: 20px;
+    box-sizing: border-box;
+	padding:0 4px;
+	color:#fff;
+	background:#315082;
+	border-top:1px solid #3f5a78;
+	border-bottom:1px solid #3f5a78;
+}
+.players .name span{
+	font-size:14px;
+	display:inline-block;
+	line-height:18px;
+	padding:0 4px;
+	color:#3f5a78;
+	border-top:1px solid #3f5a78;
+	border-bottom:1px solid #3f5a78;
+}
+.players.p_02 .name label{
+	display:inline-block;
+	font-size:16px;
+	height: 20px;
+    box-sizing: border-box;
+	padding:0 4px;
+	color:#fff;
+	background:#823131;
+	border-top:1px solid #8d4a49;
+	border-bottom:1px solid #8d4a49;
+}
+.players.p_02 .name span{
+	font-size:14px;
+	display:inline-block;
+	line-height:18px;
+	padding:0 4px;
+	color:#8d4a49;
+	border-top:1px solid #8d4a49;
+	border-bottom:1px solid #8d4a49;
+}
+.players .ya{
+	font-size:16px;
+	width:77px;
+	margin:0 auto;
+	line-height:18px;
+	border-radius:150px;
+	padding:6px 0;
+	color:#fff;
+	background:#dca628;
+	text-align:center;
+}
+.bet{position:relative; overflow:hidden;}
+.bet img{width:100%;}
+.bet span{position:absolute;width:50%; height:60%; top:0;}
+.bet span:first-child{left:0;}
+.bet span:last-child{right:0;}
+.tabelBox{
+	background:url(../img/tabelWrap.png) no-repeat;
+	background-size:100% 100%;
+	padding:0 30px;
+	margin-top: -1px;
+	padding-bottom: 30px;
+}
+.t_head{position:relative; overflow:hidden;}
+.t_head img{width:100%;}
+.t_head span{position:absolute;width:28.5%; height:100%; top:0;
+	/*border-bottom:1px solid #ebd991;*/
+	box-sizing:border-box;}
+.t_head span:first-child{left:0;}
+.t_head span:last-child{right:0;}
+.t_head span.curr{
+	border-bottom:none;
+}
+table{
+	border:1px solid #f1e197;
+	border-top:none;
+	margin: 0;
+    width: 100%;
+}
+table th{
+	color:#ffeece;
+	font-size:13px;
+	line-height:28px;
+	width:22%;
+	font-weight:normal;
+}
+table th:last-child{
+	width:34%;
+}
+table tbody tr{
+	/*background:-webkit-linear-gradient(left,rgba(99,94,69,0),rgba(99,94,69,1),rgba(99,94,69,0));*/
+}
+table td{
+	color:#bcaa88;
+	font-size:12px;
+	line-height:28px;
+	font-weight:normal;
+	text-align:center;
+	border-top:1px solid #635e45;
+}
+
+
+
+
+
+
+
+/*弹窗*/
+.mask{ width:100%; height:100%; position:fixed; top:0; left:0; background:rgba(0,0,0,0.5); z-index:99; display: block;}
+.mask .dialog {
+    padding: 30px 0 0;
+    box-sizing: border-box;
+    width: 90%;
+    background: #fff;
+    position: fixed;
+    z-index: 999;
+    top: 50%;
+    margin-top: -200px;
+    left: 5%;
+}
+.mask .dialog p{
+	padding-left:20px;
+	font-size:15px;
+	color:#333;
+	line-height:30px;
+}
+.mask .dialog p span{
+	color:#f2b614;
+}
+.mask .dialog .yuan{padding:20px 10px 0 10px; overflow:hidden;}
+.mask .dialog .yuan li{
+	width:22%;
+	margin:10px 5.6%;
+	float:left;
+}
+.mask .dialog .payMethod{ 
+	font-size: 15px;
+    color: #333;
+	position:relative;
+	margin:30px 0 40px 48px;
+}
+.mask .dialog .payMethod:before{ 
+	content:"";
+	position:absolute;
+	width:14px;
+	height:14px;
+	background:url(../img/payMethod.png) no-repeat;
+	background-size:100% 100%;
+	left:-18px;
+	top:.5px;
+}
+.mask .dialog .toPay{
+	font-size:18px;
+	color:#fff;
+	height:50px;
+	line-height:50px;
+	text-align:center;
+	background:#f4c126;
+}
+.close{
+	width:20px;
+	height:20px;
+	position:absolute;
+	right:15px;
+	top:15px;
+	background:url(../img/close.png) no-repeat;
+	background-size:100%;
+}
+.tip{
+	position:fixed;
+	z-index:9999;
+	top:50%;
+	left:0;
+	width:100%;
+	text-align:center;
+}
+.tip span{
+	display:inline-block;
+	padding:8px 15px;
+	font-size:15px;
+	border-radius:20px;
+	color:#fff;
+	background:rgba(0,0,0,0.8);
+}

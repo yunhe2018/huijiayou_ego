@@ -1,0 +1,16 @@
+﻿.ui-loader-default{ display:none}
+.ui-mobile-viewport{ border:none;}
+.ui-page {padding: 0; margin: 0; outline: 0} 
+.gray { 
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);   
+    -o-filter: grayscale(100%);
+    
+    filter: grayscale(100%);
+	
+    filter: gray;
+}
+.div_subscribe_area_class{    
+    margin-top:45px;
+    margin-bottom:-3px;
+}

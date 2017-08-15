@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>惠家有一元夺宝</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+    <script src="/js/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/base.css", "/css/yiyuan.css"], ["/JS/jquery-2.1.4-min.js", "/JS/g_header.js", "/JS/functions/g_Const.js", "/JS/functions/g_Const.js", "/JS/functions/g_Type.js", "/JS/g_index.js"]];
+        WriteStatic(staticlist);
+    </script>
+</head>
+<body>
+    <div class="address_edit">
+        <div class="addrHeader" id="title">
+            <a class="back" id="btnBack"></a>收货地址
+        </div>
+
+        <ul class="my_menu">
+            <li class="my_orders">
+                <a href="javascript:;" class="clearfix">
+                    <span class="menu_txt">收货人姓名</span>
+                    <input type="text" id="txtUserName" placeholder="请输入收货人姓名" />
+                </a>
+            </li>
+            <li class="my_orders">
+                <a href="javascript:;" class="clearfix">
+                    <span class="menu_txt">手机号码</span>
+                    <input type="text" id="txtPhoneNo" placeholder="请输入手机号" />
+                </a>
+            </li>
+            <li id="liCode" class="my_orders" style="position:relative;">
+                <a class="clearfix">
+                    <input type="tel" value="" class="menu_txt" placeholder="请输入验证码" id="txtValidCode">
+                    <button id="btnCode" class="mobile-yanzm" style="background:#dc0f50;">获取验证码</button>
+                </a>
+            </li>
+            <li class="my_orders">
+                <a href="javascript:;" class="clearfix">
+                    <span class="menu_txt">所在省份</span>
+                    <select id="selProv"></select>
+                    <span class="menu_point"></span>
+                </a>
+            </li>
+            <li class="my_orders">
+                <a href="javascript:;" class="clearfix">
+                    <span class="menu_txt">所在城市</span>
+                    <select id="selCity"></select>
+                    <span class="menu_point"></span>
+                </a>
+            </li>
+            <li class="my_orders">
+                <a href="javascript:;" class="clearfix">
+                    <span class="menu_txt">所在地区</span>
+                    <select id="selDistrict"></select>
+                    <span class="menu_point"></span>
+                </a>
+            </li>
+            <li class="my_orders">
+                <a href="javascript:;" class="clearfix">
+                    <span class="menu_txt">详细地址</span>
+                    <input type="text" id="txtAddressDetail" placeholder="请输入详细地址" />
+                </a>
+            </li>
+            <li class="my_orders no_bor">
+                <a href="javascript:;" class="clearfix">
+                    <span class="menu_txt">身份证号</span>
+                    <input type="text" id="txtIDNumber" placeholder="海关商品报关使用" />
+                </a>
+            </li>
+        </ul>
+        <div class="address_edit_tip">
+            提示：领取海外商品，海关需验证收货人身份证信息，请填写
+            与收货人姓名一致的身份证号！否则将下单失败！
+        </div>
+        <div class="btn_wrap">
+            <div class="toNewBtn_03" id="btnSave" style="bottom:0;left:8%;background:#f6123d;color: #fff;">保　存</div>
+            <div class="toNewBtn_02" id="btnDel" onclick="DeleteAddress();">删　除</div>
+        </div>
+    </div>
+    <div id="divAlert"></div>
+    <script type="text/javascript">
+        var staticlist = [[], ["/JS/tost.js", "/JS/JValidator.js", "/JS/pages/AddressBase.js", "/JS/pages/ValidCodeBase.js", "/JS/pages/AddressEdit.js"]];
+        WriteStatic(staticlist);
+    </script>
+</body>
+</html>

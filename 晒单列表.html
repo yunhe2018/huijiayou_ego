@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>hjy</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+<link href="css/base.css" rel="stylesheet">
+<link href="./css/yiyuan.css" rel="stylesheet" type="text/css">
+<style>
+</style>
+</head>
+<body>
+<div class="">
+	<div class="addrHeader">
+		<a href="#" class="back"></a>晒单
+	</div>
+    <ul class="shaidan" style="display: none">
+    	<li class="clearfix">
+        	<div class="shaidan_head">
+            	<img src="img/personal.png" />
+            </div>
+            <div class="shaidan_info">
+            	<div class="shaidan_info_01 clearfix"><span class="tel">1233***089898</span><span class="date">2016-28-23 34：23：24</span></div>
+                <h3>晒单标题</h3>
+                <p class="shaidan_info_02">具体面熟内容具体面熟内容具体面熟内容具体面熟内容具体面熟内容具体面熟内容具体面熟内容具体面熟内容</p>
+                <ul class="shaidan_info_pic clearfix">
+                	<li><img src="img/haha.jpg" /></li>
+                	<li><img src="img/haha.jpg" /></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+    <div class="noshaidan"><img src="img/nosd.jpg"></div>
+</div>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script>
+window.onload=function(){
+	//自适应rem初始化设置
+	function fontSize(){
+		if(document.documentElement.clientWidth<640){ //initial-scale=0.5是缩小一倍后适应屏幕宽。
+			document.documentElement.style.fontSize = 10*(document.documentElement.clientWidth/320)+'px';
+		}else{ 
+			document.documentElement.style.fontSize='20px';
+		}
+	}
+	fontSize();
+	window.onresize=function(){fontSize();};
+	
+}
+$(function(){
+	$(".partNums_open").click(function(){
+		if($(this).hasClass("par_close")){
+			$(this).removeClass("par_close");
+			$(this).parent().css("height",".8rem");
+		}else{
+			$(this).addClass("par_close");
+			$(this).parent().css("height","auto");
+		}
+	})
+})
+
+
+</script>
+</body>
+</html>

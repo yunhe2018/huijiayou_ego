@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>来呀~互相伤害呀~！！</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1" />
+
+    <script src="/JS/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["./css/base.css", "./css/drawing.css"], ["/JS/jquery-2.1.4-min.js", "/JS/g_header.js", "/JS/functions/g_Const.js", "/JS/functions/g_Type.js", "/JS/tost.js", "/JS/JValidator.js"], []];
+        WriteStatic(staticlist);
+    </script>
+    <script>
+        if (IsInWeiXin.check()) {
+            $.each(g_const_OrderConfirmRefer, function (k, o) {
+                if (document.referrer.toLowerCase().indexOf(o) > -1) {
+                    var wxUrl = "/act/ry/index.html";
+                    WxInfo.GetPayID(wxUrl);
+                }
+            });
+        }
+    </script>
+
+</head>
+<body>
+    <div class="drawing">
+        <header>不要怂就是战！</header>
+        <div class="box-01">
+            <img src="img/img01.jpg">
+            <div class="count">
+                <span>总押注</span>
+                <p id="p_totalchipoinmoney">￥0</p>
+            </div>
+            <p class="joinPeople" id="chipinlast" style="display:none;"><!--189****8998：押孙磊 5 元--></p>
+            <div class="teamName"><span id="leftteamname"><!--送成狗队--></span><span  id="rightteamname"><!--哎呦卧槽--></span></div>
+        </div>
+        <ul class="box-02 team clearfix" id="ul_teamuser">
+            <li>
+                <ul class="players"  id="leftteamuser">
+                    <!--<li>
+                        <div class="pic"><img src="img/sunlei.jpg" /></div>
+                        <div class="name"><label>孙磊</label><span>ID：诱人真空%</span></div>
+                        <div class="ya">押 MVP</div>
+                    </li>
+                    <li>
+                        <div class="pic"><img src="img/sunlei.jpg" /></div>
+                        <div class="name"><label>孙磊</label><span>ID：诱人真空%</span></div>
+                        <div class="ya">押 MVP</div>
+                    </li>
+                    <li>
+                        <div class="pic"><img src="img/sunlei.jpg" /></div>
+                        <div class="name"><label>孙磊</label><span>ID：诱人真空%</span></div>
+                        <div class="ya">押 MVP</div>
+                    </li>-->
+                </ul>
+            </li>
+            <li>
+                <ul class="players p_02"  id="rightteamuser">
+                    <!--<li>
+                        <div class="pic"><img src="img/sunlei.jpg" /></div>
+                        <div class="name"><label>孙磊</label><span>ID：诱人真空%</span></div>
+                        <div class="ya">押 MVP</div>
+                    </li>
+                    <li>
+                        <div class="pic"><img src="img/sunlei.jpg" /></div>
+                        <div class="name"><label>孙磊</label><span>ID：诱人真空%</span></div>
+                        <div class="ya">押 MVP</div>
+                    </li>
+                    <li>
+                        <div class="pic"><img src="img/sunlei.jpg" /></div>
+                        <div class="name"><label>孙磊</label><span>ID：诱人真空%</span></div>
+                        <div class="ya">押 MVP</div>
+                    </li>-->
+                </ul>
+            </li>
+        </ul>
+        <div class="bet">
+            <img src="img/img-03.jpg">
+            <span id="btn_leftteamwin"></span>
+            <span id="btn_rightteamwin"></span>
+        </div>
+        <div class="tabelBox">
+            <div class="t_head">
+                <img id="img_head" src="img/tabelHead01.jpg">
+                <span id="show_mychipin"></span>
+                <span id="show_sumchipin"></span>
+            </div>
+            <table id="table_mychipin" border="0" cellspacing="0" cellpadding="0">
+                <thead>
+                    <tr>
+                        <th>投注对象</th>
+                        <th>投注金额</th>
+                        <th>投注赔率</th>
+                        <th>支付时间</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody_mychipin">
+                    <!--<tr>
+                        <td>孙磊</td>
+                        <td>5.00</td>
+                        <td>1:1.7</td>
+                        <td>01-08 12： 12</td>
+                    </tr>
+                    <tr>
+                        <td>孙磊</td>
+                        <td>5.00</td>
+                        <td>1:1.7</td>
+                        <td>01-08 12： 12</td>
+                    </tr>
+                    <tr>
+                        <td>孙磊</td>
+                        <td>5.00</td>
+                        <td>1:1.7</td>
+                        <td>01-08 12： 12</td>
+                    </tr>-->
+                </tbody>
+            </table>
+            <table id="table_sumchipin" border="0" cellspacing="0" cellpadding="0" style="display:none;">
+                <thead>
+                    <tr>
+                        <th>投注排序</th>
+                        <th>投注对象</th>
+                        <th>投注数量</th>
+                        <th>投注金额</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody_sumchipin">
+                    <!--<tr>
+                <td>孙磊</td>
+                <td>5.00</td>
+                <td>1:1.7</td>
+            </tr>
+            <tr>
+                <td>孙磊</td>
+                <td>5.00</td>
+                <td>1:1.7</td>
+            </tr>
+            <tr>
+                <td>孙磊</td>
+                <td>5.00</td>
+                <td>1:1.7</td>
+            </tr>-->
+                </tbody>
+            </table>
+
+        </div>
+
+
+        <!--弹框-->
+        <div id="div_selmoney" class="mask" style="display:none;">
+            <div class="dialog">
+                <div class="close"></div>
+                <p>您选择对象是：<span id="selname"><!--孙磊--></span></p>
+                <p>当前投注赔率：<span id="selpv"><!--1: 7--></span></p>
+                <ul id="selpaymoney" class="yuan">
+                    <li id="yuan_01" paymoney="0.01"><img src="img/yuan_01_curr.png" /></li>
+                    <li id="yuan_05" paymoney="0.02"><img src="img/yuan_05.png" /></li>
+                    <li id="yuan_10" paymoney="0.03"><img src="img/yuan_10.png" /></li>
+                    <li id="yuan_20" paymoney="0.04"><img src="img/yuan_20.png" /></li>
+                    <li id="yuan_30" paymoney="0.05"><img src="img/yuan_30.png" /></li>
+                    <li id="yuan_40" paymoney="0.06"><img src="img/yuan_40.png" /></li>
+                </ul>
+                <div class="payMethod">微信支付</div>
+                <div class="toPay" id="btn_pay">立即支付</div>
+                <div class="toPay" id="btn_pay_wait" style="display:none;">支付中，请稍后</div>
+            </div>
+        </div>
+
+        <div class="tip">
+            <span style="display:none">请稍后，正在加载中。。。</span>
+        </div>
+
+
+    </div>
+
+    <script type="text/javascript">
+        var staticlist = [[], ["/JS/ry/ChipinConfirm.js"], []];
+        WriteStatic(staticlist);
+    </script>
+
+</body>
+
+
+</html>

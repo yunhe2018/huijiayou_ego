@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<meta content="email=no" name="format-detection" />
+<meta charset="UTF-8">
+<title>我的优惠券_使用优惠券</title>
+<link href="css/base.css" rel="stylesheet">
+<link href="css/yiyuan.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script src="js/tost.js"></script>
+</head>	
+<body class="qqbg">
+<div class="addrHeader">
+            <a href="#" class="back"></a>使用优惠券
+</div>
+
+<div id="section_lishi" class="coupon-area" style="display: block;">
+                <ul id="ul_lishi" class="coupon-list" module="202055">
+                    <li class="coupon-history">
+                        <img src="img/w_img/yhq_top.jpg">
+                        <div class="coupon-info apply clearfix" onclick="MyCoupon.GoTo('','')">
+                            <div class="coupon-price">
+                                <span><i>¥</i>888</span><em>满22元可用</em>
+                            </div>
+                            <h1 class="coupon-txt">全场通用（促销商品除外）</h1>
+                            <p class="coupon-time"><span>使用期限：</span>2016-05-12~2016-05-14</p>
+                        </div>
+                        <div id="1_0" class="coupon-caption" onclick="MyCoupon.ShowCouponDIV('1_0')" style="display:block">
+                            <a class="coupon-btn"></a>
+                            <div class="p_1_0" id="p_1_0">
+                                <p>1.爱的色放卢卡斯的那份卡死了的三列的飞进给删掉了分公司的风格送的风格宋德福公司的了分公司的发了个送的风格宋德福</p>
+                                <p>2.s爱的色放卢卡斯的那份卡死</p>
+                                <p>3.sdjf爱的色放卢卡斯的那份卡死</p>
+                                <p>5.sdjflsjdfls爱的色放卢卡斯的那份卡死</p>
+                            </div>
+                        </div>
+                        <div class="radio"><input type="radio" name="zhifu" value="weixin"></div>
+                    </li>
+                    <li class="coupon-history">
+                        <img src="img/w_img/yhq_top.jpg">
+                        <div class="coupon-info apply clearfix" onclick="MyCoupon.GoTo('','')">
+                            <div class="coupon-price">
+                                <span><i>¥</i>8</span><em>满22元可用</em>
+                            </div>
+                            <h1 class="coupon-txt">全场通用（促销商品除外）</h1>
+                            <p class="coupon-time"><span>使用期限：</span>2016-05-12~2016-05-14</p>
+                        </div>
+                        <div id="1_0" class="coupon-caption" onclick="MyCoupon.ShowCouponDIV('1_0')" style="display:block">
+                            <a class="coupon-btn"></a>
+                            <div class="p_1_0" id="p_1_0">
+                                <p>1.爱的色放卢卡斯的那份卡死了的三列的飞进给删掉了分公司的风格送的风格宋德福公司的了分公司的发了个送的风格宋德福</p>
+                                <p>2.s爱的色放卢卡斯的那份卡死</p>
+                                <p>3.sdjf爱的色放卢卡斯的那份卡死</p>
+                                <p>5.sdjflsjdfls爱的色放卢卡斯的那份卡死</p>
+                            </div>
+                        </div>
+                        <div class="radio"><input type="radio" name="zhifu" value="weixin"></div>
+                    </li>
+    </ul>
+    <div class="tit"><span>以下券不适用于所结算商品</span></div>
+    <ul class="coupon-list no" module="202055">
+        <li class="coupon-history">
+            <img src="img/w_img/yhq_top_no.jpg">
+            <div class="coupon-info apply clearfix" onclick="MyCoupon.GoTo('','')">
+                <div class="coupon-price">
+                    <span><i>¥</i>8</span><em>满22元可用</em>
+                </div>
+                <h1 class="coupon-txt">全场通用（促销商品除外）</h1>
+                <p class="coupon-time"><span>使用期限：</span>2016-05-12~2016-05-14</p>
+            </div>
+            <div id="1_0" class="coupon-caption" onclick="MyCoupon.ShowCouponDIV('1_0')" style="display:block">
+                <a class="coupon-btn"></a>
+                    <div class="p_1_0" id="p_1_0">
+                                <p>1.爱的色放卢卡斯的那份卡死了的三列的飞进给删掉了分公司的风格送的风格宋德福公司的了分公司的发了个送的风格宋德福</p>
+                                <p>2.s爱的色放卢卡斯的那份卡死</p>
+                                <p>3.sdjf爱的色放卢卡斯的那份卡死</p>
+                                <p>5.sdjflsjdfls爱的色放卢卡斯的那份卡死</p>
+                    </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="btn_background" id="btn_back" style="display:block;">
+   <div class="toNewBtn_03" id="btnConfirm" style="display:block;background:#f6123d;color: #fff;">确定</div>
+</div>
+
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+    //................显示/隐藏优惠券使用说明
+    $('.coupon-btn').click(function(){
+        $(this).siblings('.p_1_0').toggle();
+    })
+    //选择
+    $('.radio').click(function(){
+        $('.radio').removeClass('on');
+        $(this).addClass('on');
+    })
+})
+</script>
+</body>
+</html>

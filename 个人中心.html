@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>拼好货</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+<link href="css/base.css" rel="stylesheet">
+<link href="./css/yiyuan.css" rel="stylesheet" type="text/css">
+<style>
+
+</style>
+</head>
+<body>
+<div class="peresonalH ">
+	<div class="personHeader">
+		<div class="personPic"><img src="img/radio.png" /></div>
+		<div class="persontxt">用户名还是手机号</div>
+	</div>
+	<div class="succRecord"><span class="lt">夺宝纪录</span><span>中奖纪录</span></div>
+	<ul class="my_menu">
+		<li  class="my_orders clearfix">
+			<a href="javascript:;" class="clearfix">
+				<span class="menu_txt">我的优惠券</span>
+				<span class="menu_point"></span>
+				<i>1000张</i>
+			</a>
+	    </li>
+		<li  class="my_tuan clearfix">
+			<a href="javascript:;" class="clearfix">
+				<span class="menu_txt">我的晒单</span>
+				<span class="menu_point"></span>
+			</a>
+	    </li>
+		<li  class="my_shouhou clearfix">
+			<a href="javascript:;" class="clearfix">
+				<span class="menu_txt">常见问题</span>
+				<span class="menu_point"></span>
+			</a>
+	    </li>
+		<li  class="my_addr clearfix">
+			<a href="javascript:;" class="clearfix">
+				<span class="menu_txt">联系客服</span>
+				<span class="menu_point"></span>
+			</a>
+	    </li>
+	</ul>
+</div>
+<div class="cancelLogin">退出登录</div>
+<ul class="b_nav clearfix">
+            <li onclick="g_const_PageURL.GoTo(g_const_PageURL.Index);">
+                <div class="b_nav_pic bpic1"></div>
+                <div class="b_nav_txt">首页</div>
+            </li>
+            <li onclick="g_const_PageURL.GoTo(g_const_PageURL.AwardList);">
+                <div class="b_nav_pic bpic22"></div>
+                <div class="b_nav_txt">最新揭晓</div>
+            </li>
+            <li onclick="g_const_PageURL.GoTo(g_const_PageURL.CommonProblem);">
+                <div class="b_nav_pic bpic33"></div>
+                <div class="b_nav_txt">常见问题</div>
+            </li>
+            <li onclick="g_const_PageURL.GoTo(g_const_PageURL.MyOrder_List);">
+                <div class="b_nav_pic bpic4"></div>
+                <div class="b_nav_txt curr">夺宝纪录</div>
+            </li>
+        </ul>
+<script>
+window.onload=function(){
+	//自适应rem初始化设置
+	function fontSize(){
+		if(document.documentElement.clientWidth<1280){ //initial-scale=0.5是缩小一倍后适应屏幕宽。
+			document.documentElement.style.fontSize = 10*(document.documentElement.clientWidth/320)+'px';
+		}else{ 
+			document.documentElement.style.fontSize='40px';
+		}
+	}
+	fontSize();
+	window.onresize=function(){fontSize();};	
+}
+</script>
+</body>
+</html>

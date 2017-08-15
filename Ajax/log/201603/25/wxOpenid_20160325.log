@@ -1,0 +1,2 @@
+[2016-03-25 11:17:35.886]		System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 com.ichsy.jyh.WebTouch.Ajax.API.Page_Load(Object sender, EventArgs e) 位置 E:\WorkSpace\VSS\拼好货\WebUI\Ajax\API.aspx.cs:行号 308

@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>最新揭晓</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+    <script src="/JS/cdn.js"></script>
+    <script type="text/javascript">
+        var staticlist = [["/css/base.css", "/css/yiyuan.css"], ["/JS/jquery-2.1.4-min.js", "/JS/g_header.js", "/JS/functions/g_Const.js", "/JS/functions/g_Type.js", "/JS/tost.js", "/JS/JValidator.js", "/JS/g_index.js"], ["/memlist.js"]];
+        WriteStatic(staticlist);
+    </script>
+</head>
+<body>
+    <div class="addrHeader">
+        <!--<a class="back" onclick="history.back();"></a>-->最新揭晓
+    </div>
+    <script type="text/javascript">
+        if (IsInWeiXin.check()) {
+            $("div.addrHeader").hide();
+        }
+    </script>
+    <div class="ann_wrap">
+        <ul class="ann clearfix" id="resultList"></ul>
+    </div>
+    <div class="duobing" id="noResult" style="margin-top:100px;display:none;">
+        <img src="/img/wwwww.jpg">
+        <p>还没有最新揭晓，大波商品火爆进行中~</p>
+    </div>
+    <div class="isBtm" style="display:none;" id="theLast">
+        <span><i>已经到底了</i></span>
+    </div>
+    <div style="height:6rem;">
+    </div>
+    <ul class="b_nav clearfix">
+        <li onclick="g_const_PageURL.GoTo(g_const_PageURL.Index);">
+            <div class="b_nav_pic bpic1"></div>
+            <div class="b_nav_txt">首页</div>
+        </li>
+        <li onclick="g_const_PageURL.GoTo(g_const_PageURL.AwardList);">
+            <div class="b_nav_pic bpic2"></div>
+            <div class="b_nav_txt curr">最新揭晓</div>
+        </li>
+        <li onclick="g_const_PageURL.GoTo(g_const_PageURL.ShowOrder_List);">
+            <div class="b_nav_pic bpic55"></div>
+            <div class="b_nav_txt">晒单</div>
+        </li>
+        <!--<li onclick="g_const_PageURL.GoTo(g_const_PageURL.MyOrder_List);">
+            <div class="b_nav_pic bpic44"></div>
+            <div class="b_nav_txt">夺宝纪录</div>
+        </li>-->
+        <li onclick="g_const_PageURL.GoTo(g_const_PageURL.MyAccount);">
+            <div class="b_nav_pic my">
+                <i class="newTip" style="display:none;" id="tipNew"></i>
+            </div>
+            <div class="b_nav_txt">我的</div>
+        </li>
+    </ul>
+    <div class="retn">
+        <a href="javascript:;" class="to_top" style="display: none;"></a>
+    </div>
+    <script type="text/javascript">
+        var staticlist = [[], ["/JS/pages/awardList.js"]];
+        AppendStatic(staticlist, function () {
+            window.onload = function () {
+                awardList.Init();
+            }
+        });
+    </script>
+</body>
+</html>
